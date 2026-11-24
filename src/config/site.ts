@@ -1,7 +1,7 @@
 /** Single source of truth for personal data used across the site. */
 export const site = {
   name: "Jair C.",
-  url: "https://castaneda-jair.pages.dev",
+  url: "https://castaneda-jair.github.io",
   analyticsId: "G-9HK5NQ2DPJ",
   email: "c.h.jair13@gmail.com",
   /** Public path to a CV PDF (put the file in /public). Leave empty to hide the button. */
