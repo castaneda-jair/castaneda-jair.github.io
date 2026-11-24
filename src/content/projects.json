@@ -1,0 +1,268 @@
+[
+  {
+    "id": "koyora",
+    "title": "Koyora",
+    "order": 1,
+    "cover": "/images/projects/koyora/landing.bdddce4c79.webp",
+    "gallery": [
+      {
+        "src": "/images/projects/koyora/landing.bdddce4c79.webp",
+        "caption": {
+          "es": "Landing: presentación del producto y sus etapas.",
+          "en": "Landing page: the product and its workflow."
+        }
+      },
+      {
+        "src": "/images/projects/koyora/login.d81a41cf7f.webp",
+        "caption": {
+          "es": "Inicio de sesión en el espacio de trabajo.",
+          "en": "Sign in to the workspace."
+        }
+      },
+      {
+        "src": "/images/projects/koyora/cover.63b54e9b28.webp",
+        "caption": {
+          "es": "Visor PDF integrado con búsqueda, miniaturas y archivos de cada versión.",
+          "en": "Built-in PDF viewer with search, thumbnails and files for each version."
+        }
+      }
+    ],
+    "demoUrl": "https://koyora.online/",
+    "repoUrl": "https://github.com/Anemone3/koyo",
+    "live": true,
+    "stack": [
+      "elixir",
+      "liveview",
+      "postgresql",
+      "python",
+      "fastapi",
+      "pydanticai",
+      "logfire",
+      "opentelemetry",
+      "oauth2",
+      "tailwindcss",
+      "pdfjs",
+      "libreoffice",
+      "docker"
+    ],
+    "description": {
+      "es": "Asistente para preparar trabajos académicos: desde la consigna y la propuesta hasta la investigación, la redacción y la revisión de Word y PDF.",
+      "en": "An assistant for academic writing: from the brief and an approved outline to research, drafting and Word/PDF review."
+    },
+    "content": {
+      "es": [
+        "Koyora reúne el pedido, la investigación y la escritura de trabajos académicos en un mismo flujo. El usuario puede adjuntar una consigna, revisar la propuesta y seguir el desarrollo del documento por etapas.",
+        "La interfaz en Phoenix LiveView se conecta con un motor privado de Python y FastAPI. La investigación conserva fuentes y evidencias; la entrega incluye un visor PDF, archivos Word/PDF y observaciones para revisar el resultado antes de utilizarlo.",
+        "La autenticación admite cuentas locales y acceso con Google mediante OAuth 2.0 y OpenID Connect, implementado con Assent. El callback valida la identidad y el correo verificado antes de crear o vincular la cuenta y abrir la sesión en Phoenix."
+      ],
+      "en": [
+        "Koyora brings the brief, research and academic writing into one workflow. Users can attach an assignment, review the proposed outline and follow the document as it develops through each stage.",
+        "The Phoenix LiveView interface connects to a private Python and FastAPI engine. Research keeps track of sources and evidence; the output includes a PDF viewer, Word/PDF files and observations to review before using the document.",
+        "Authentication supports local accounts and Google sign-in through OAuth 2.0 and OpenID Connect, implemented with Assent. The callback validates the identity and verified email before creating or linking the account and opening the Phoenix session."
+      ]
+    },
+    "features": {
+      "es": [
+        "Consignas y fuentes adjuntas en PDF, Word, texto o Markdown",
+        "Propuesta de estructura que el usuario revisa y aprueba",
+        "Investigación con OpenAlex y Crossref, evidencias y citas trazables",
+        "Redacción por etapas con borradores y avances guardados",
+        "Visor PDF con páginas, miniaturas, zoom y búsqueda",
+        "Exportación Word/PDF e informe de revisión con observaciones",
+        "Biblioteca, colecciones y versiones de cada entrega",
+        "Inicio de sesión local y Google OAuth 2.0 / OpenID Connect con Assent",
+        "Observabilidad de agentes con Logfire, OpenTelemetry y logs estructurados por ejecución"
+      ],
+      "en": [
+        "Assignment briefs and sources in PDF, Word, text or Markdown",
+        "A proposed outline for the user to review and approve",
+        "Research with OpenAlex and Crossref, evidence and traceable citations",
+        "Staged writing with saved drafts and progress",
+        "PDF viewer with page navigation, thumbnails, zoom and search",
+        "Word/PDF exports and a review report with observations",
+        "A library, collections and versions for each document",
+        "Local sign-in and Google OAuth 2.0 / OpenID Connect with Assent",
+        "Agent observability with Logfire, OpenTelemetry and structured execution logs"
+      ]
+    },
+    "videos": [
+      {
+        "src": "/videos/projects/koyora/overview.263412e741.mp4",
+        "poster": "/images/projects/koyora/overview.a95e34a20f.webp",
+        "width": 960,
+        "height": 960,
+        "duration": "0:43",
+        "title": {
+          "es": "Planificación y seguimiento del trabajo",
+          "en": "Planning and progress tracking"
+        },
+        "description": {
+          "es": "Del pedido a la propuesta: organización, investigación y seguimiento del trabajo.",
+          "en": "From the brief to the outline: organization, research and progress tracking."
+        },
+        "details": {
+          "es": [
+            "Phoenix LiveView mantiene la interfaz reactiva durante la preparación del trabajo. La aplicación en Elixir conserva los metadatos en PostgreSQL y delega la planificación, investigación y redacción a un servicio privado de Python y FastAPI.",
+            "Los agentes de PydanticAI convierten la consigna y los archivos adjuntos en una propuesta estructurada que el usuario debe aprobar. La investigación consulta OpenAlex y Crossref; el motor conserva fuentes, evidencias y avances por etapas para poder revisar cómo se construye el documento.",
+            "La observabilidad combina logs operativos estructurados con trazas de agentes. Cada evento registra el identificador de ejecución, la etapa, el estado, una secuencia, las llamadas al modelo, los tokens de entrada y salida y los códigos de error. El registro de actividad de la interfaz muestra el avance; los checkpoints privados conservan el estado de la ejecución.",
+            "Logfire instrumenta PydanticAI sobre OpenTelemetry y agrupa spans por ejecución y etapa para inspeccionar el recorrido y diagnosticar fallos. La telemetría se activa explícitamente por configuración: por defecto excluye prompts y respuestas, no captura contenido binario y registra el tipo de excepción sin enviar su mensaje completo."
+          ],
+          "en": [
+            "Phoenix LiveView keeps the interface reactive while a document is prepared. The Elixir application stores metadata in PostgreSQL and delegates planning, research and writing to a private Python and FastAPI service.",
+            "PydanticAI agents turn the brief and attachments into a structured outline for the user to approve. Research queries OpenAlex and Crossref; the engine saves sources, evidence and staged progress so the document’s development can be reviewed.",
+            "Observability combines structured operational logs with agent traces. Each event records the execution ID, stage, status, sequence, model requests, input/output tokens and error codes. The interface’s activity log shows progress, while private checkpoints retain execution state.",
+            "Logfire instruments PydanticAI through OpenTelemetry and groups spans by execution and stage to inspect the workflow and diagnose failures. Telemetry is explicitly enabled through configuration: prompts and responses are excluded by default, binary content is not captured, and exceptions are recorded by type without sending their full message."
+          ]
+        }
+      },
+      {
+        "src": "/videos/projects/koyora/result.501afcaf62.mp4",
+        "poster": "/images/projects/koyora/result.7940a7cc37.webp",
+        "width": 1280,
+        "height": 720,
+        "duration": "0:39",
+        "title": {
+          "es": "Del motor documental al visor PDF",
+          "en": "From the document engine to the PDF viewer"
+        },
+        "description": {
+          "es": "Revisión del documento generado, navegación por el PDF, búsqueda y descarga en Word y PDF.",
+          "en": "Review the generated document, navigate and search its PDF, and download Word and PDF files."
+        },
+        "details": {
+          "es": [
+            "El motor compone el archivo Word con python-docx y utiliza LibreOffice/UNO para actualizar campos y generar el PDF. Las comprobaciones con pypdf y el informe de revisión acompañan los archivos de cada versión; los pendientes se muestran como observaciones y el borrador permanece provisional cuando requiere revisión.",
+            "El visor integrado usa PDF.js con su worker local para mostrar páginas y miniaturas, ajustar el zoom y buscar texto. El video recorre un documento generado real, sus versiones y la descarga en Word y PDF desde la misma entrega."
+          ],
+          "en": [
+            "The engine builds the Word file with python-docx and uses LibreOffice/UNO to update fields and generate the PDF. Checks with pypdf and a review report accompany each version’s files; outstanding issues appear as observations, and drafts that need review remain provisional.",
+            "The integrated viewer uses PDF.js with a local worker for pages, thumbnails, zoom and text search. The video walks through a real generated document, its versions and Word/PDF downloads from the same delivery."
+          ]
+        }
+      }
+    ],
+    "repoVisibility": "private"
+  },
+  {
+    "title": "Melon Podoromo",
+    "order": 2,
+    "cover": "/images/projects/melon-podoromo/landing.png",
+    "gallery": [
+      {
+        "src": "/images/projects/melon-podoromo/landing.png",
+        "caption": {
+          "es": "Landing de descarga",
+          "en": "Download landing page"
+        }
+      }
+    ],
+    "demoUrl": "https://melondoromo.kokostore.site/",
+    "repoUrl": "https://github.com/Anemone3/desktop-podoromo",
+    "live": true,
+    "stack": [
+      "electron",
+      "react",
+      "zustand",
+      "daisyui"
+    ],
+    "description": {
+      "es": "Aplicación de escritorio Pomodoro que gestiona tiempos de trabajo y descansos, permite crear distintos workspaces y envía notificaciones automáticas para indicar cambios de sesión.",
+      "en": "Pomodoro desktop app that manages work and break times, lets you create different workspaces and sends automatic notifications when a session changes."
+    },
+    "content": {
+      "es": [
+        "Melon Podoromo es una aplicación de escritorio construida con Electron y React para trabajar con la técnica Pomodoro sin depender del navegador.",
+        "Cada workspace guarda su propio temporizador, de modo que se pueden llevar varios proyectos en paralelo. El estado global se maneja con Zustand y la interfaz usa daisyUI sobre Tailwind.",
+        "Al terminar un bloque de trabajo o de descanso, la app envía una notificación nativa del sistema para avisar del cambio de sesión."
+      ],
+      "en": [
+        "Melon Podoromo is a desktop app built with Electron and React to work with the Pomodoro technique without relying on the browser.",
+        "Each workspace keeps its own timer, so several projects can be tracked in parallel. Global state is handled with Zustand and the UI uses daisyUI on top of Tailwind.",
+        "When a work or break block ends, the app sends a native system notification to signal the session change."
+      ]
+    },
+    "features": {
+      "es": [
+        "Temporizador de trabajo y descanso",
+        "Múltiples workspaces",
+        "Notificaciones nativas",
+        "Landing de descarga"
+      ],
+      "en": [
+        "Work and break timer",
+        "Multiple workspaces",
+        "Native notifications",
+        "Download landing page"
+      ]
+    },
+    "id": "melon-podoromo",
+    "videos": [],
+    "repoVisibility": "private"
+  },
+  {
+    "title": "Unsplash Box",
+    "order": 3,
+    "cover": "/images/projects/unsplash-box/home.png",
+    "gallery": [
+      {
+        "src": "/images/projects/unsplash-box/home.png",
+        "caption": {
+          "es": "Búsqueda y feed de imágenes",
+          "en": "Search and image feed"
+        }
+      },
+      {
+        "src": "/images/projects/unsplash-box/collections.png",
+        "caption": {
+          "es": "Colecciones del usuario",
+          "en": "User collections"
+        }
+      }
+    ],
+    "demoUrl": "https://unsplash.kokostore.site/",
+    "repoUrl": "https://github.com/Anemone3/react-aws-storage",
+    "live": false,
+    "stack": [
+      "react",
+      "awss3",
+      "postgresql",
+      "tailwindcss",
+      "nodejs",
+      "redux",
+      "prisma"
+    ],
+    "description": {
+      "es": "Aplicación tipo Pinterest que permite autenticación con Google o de forma local, gestión de colecciones y creación de pins con almacenamiento en AWS S3.\nIntegra la API de Unsplash para añadir imágenes externas y facilita la organización y descubrimiento de contenido visual de manera intuitiva.",
+      "en": "Pinterest-like app with Google or local authentication, collection management and pin creation backed by AWS S3 storage.\nIt integrates the Unsplash API to add external images and makes organizing and discovering visual content intuitive."
+    },
+    "content": {
+      "es": [
+        "Unsplash Box es una aplicación full-stack inspirada en Pinterest para guardar y organizar imágenes en colecciones.",
+        "El frontend está hecho con React, Redux y Tailwind. El backend en Node.js expone la API y usa Prisma sobre PostgreSQL para usuarios, colecciones y pins.",
+        "Las imágenes subidas por los usuarios se almacenan en AWS S3, y la integración con la API de Unsplash permite buscar y añadir imágenes externas a cualquier colección."
+      ],
+      "en": [
+        "Unsplash Box is a Pinterest-inspired full-stack app to save and organize images into collections.",
+        "The frontend is built with React, Redux and Tailwind. The Node.js backend exposes the API and uses Prisma on top of PostgreSQL for users, collections and pins.",
+        "User uploads are stored in AWS S3, and the Unsplash API integration lets you search and add external images to any collection."
+      ]
+    },
+    "features": {
+      "es": [
+        "Login con Google o local",
+        "Colecciones y pins",
+        "Subida de imágenes a AWS S3",
+        "Búsqueda con la API de Unsplash"
+      ],
+      "en": [
+        "Google or local login",
+        "Collections and pins",
+        "Image uploads to AWS S3",
+        "Search with the Unsplash API"
+      ]
+    },
+    "id": "unsplash-box",
+    "videos": [],
+    "repoVisibility": "private"
+  }
+]

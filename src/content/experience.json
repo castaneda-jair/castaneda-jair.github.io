@@ -1,0 +1,140 @@
+[
+  {
+    "id": "fractalup-genai",
+    "start": "2026-05",
+    "end": null,
+    "role": "GenAI",
+    "company": "Cipli Research Center Sociedad Anónima Cerrada | FractalUp",
+    "url": "https://www.linkedin.com/company/fractalup",
+    "employment": { "es": "Jornada completa", "en": "Full-time" },
+    "location": { "es": "Lima, Perú · En remoto", "en": "Lima, Peru · Remote" },
+    "summary": {
+      "es": "Diseño e implementación de sistemas LLM en producción: pipelines RAG, agentes con tool calling y salidas tipadas, y almacenamiento unificado de grafo y vectores.",
+      "en": "Design and implementation of production LLM systems: RAG pipelines, tool-calling agents with typed outputs, and unified graph + vector storage."
+    },
+    "highlights": [
+      {
+        "title": { "es": "Pipelines RAG e indexación", "en": "RAG pipelines & indexing" },
+        "short": {
+          "es": "Chunking, embeddings y sincronización incremental del índice vectorial.",
+          "en": "Chunking, embeddings and incremental vector index sync."
+        },
+        "detail": {
+          "es": "Ingesta de fuentes heterogéneas (texto, conversaciones, transcripciones), chunking, generación de embeddings y sincronización incremental del índice para mantener el contexto actualizado sin reindexar todo.",
+          "en": "Ingestion of heterogeneous sources (text, conversations, transcripts), chunking, embedding generation and incremental index sync to keep context fresh without full re-indexing."
+        },
+        "stack": ["python", "fastapi"]
+      },
+      {
+        "title": { "es": "Retrieval híbrido", "en": "Hybrid retrieval" },
+        "short": {
+          "es": "Búsqueda densa + BM25 y semantic search para recuperar el contexto relevante.",
+          "en": "Dense + BM25 search and semantic search to retrieve relevant context."
+        },
+        "detail": {
+          "es": "Estrategias de recuperación combinando búsqueda vectorial densa (HNSW), BM25 y búsqueda semántica, con filtros por metadatos, para mejorar la precisión del contexto que recibe el modelo.",
+          "en": "Retrieval strategies combining dense vector search (HNSW), BM25 and semantic search with metadata filters, to improve the precision of the context given to the model."
+        },
+        "stack": ["surrealdb"]
+      },
+      {
+        "title": { "es": "Agentes y salidas estructuradas", "en": "Agents & structured outputs" },
+        "short": {
+          "es": "Agentes con Pydantic AI: tool calling, salidas validadas y trazas con Logfire.",
+          "en": "Pydantic AI agents: tool calling, validated outputs and Logfire tracing."
+        },
+        "detail": {
+          "es": "Agentes con Pydantic AI que orquestan herramientas sobre varias fuentes de conocimiento, con salidas tipadas y validadas por esquema, servidos con FastAPI y observados con Logfire / OpenTelemetry.",
+          "en": "Pydantic AI agents orchestrating tools over multiple knowledge sources, with schema-validated typed outputs, served with FastAPI and observed with Logfire / OpenTelemetry."
+        },
+        "stack": ["pydanticai", "fastapi", "python"]
+      },
+      {
+        "title": { "es": "Resumen multimodal", "en": "Multimodal summarization" },
+        "short": {
+          "es": "Resúmenes por ventanas de tiempo y volumen, combinando OCR y modelos de visión.",
+          "en": "Window-based summarization (time and volume), combining OCR and vision models."
+        },
+        "detail": {
+          "es": "Pipelines de resumen disparados por ventanas de tiempo y por volumen de datos, con entrada multimodal: extracción de texto por OCR y análisis directo de imágenes con modelos de visión.",
+          "en": "Summarization pipelines triggered by time windows and data volume, with multimodal input: OCR text extraction and direct image analysis with vision models."
+        },
+        "stack": ["python"]
+      },
+      {
+        "title": { "es": "Knowledge graph + vectores", "en": "Knowledge graph + vectors" },
+        "short": {
+          "es": "Migración de FalkorDB a SurrealDB (grafo y vectores en un solo motor) y capacitación al equipo.",
+          "en": "Migrated from FalkorDB to SurrealDB (graph and vectors in one engine) and trained the team."
+        },
+        "detail": {
+          "es": "Modelado del conocimiento como grafo (nodos y edges) y migración de FalkorDB a SurrealDB para unificar grafo y vectores en un solo motor, simplificando el retrieval. Capacité a nuevos integrantes en modelado de grafos, edges y búsqueda vectorial.",
+          "en": "Knowledge modeled as a graph (nodes and edges) and migrated from FalkorDB to SurrealDB to unify graph and vectors in one engine, simplifying retrieval. Trained new team members on graph modeling, edges and vector search."
+        },
+        "stack": ["surrealdb", "falkordb"]
+      }
+    ],
+    "keywords": {
+      "es": ["RAG", "Embeddings", "Hybrid search (dense + BM25)", "Agentes / tool calling", "Structured outputs", "Multimodal (OCR + visión)", "Knowledge graphs", "LLM observability"],
+      "en": ["RAG", "Embeddings", "Hybrid search (dense + BM25)", "Agents / tool calling", "Structured outputs", "Multimodal (OCR + vision)", "Knowledge graphs", "LLM observability"]
+    },
+    "stack": ["python", "pydanticai", "fastapi", "surrealdb", "falkordb"]
+  },
+  {
+    "id": "fractalup-backend",
+    "start": "2025-11",
+    "end": null,
+    "role": "Desarrollador back-end",
+    "company": "Cipli Research Center Sociedad Anónima Cerrada | FractalUp",
+    "url": "https://www.linkedin.com/company/fractalup",
+    "employment": { "es": "Jornada completa", "en": "Full-time" },
+    "location": { "es": "Lima, Perú · En remoto", "en": "Lima, Peru · Remote" },
+    "summary": {
+      "es": "Backend en Elixir/Phoenix: ingesta de eventos de alta frecuencia, comunicación en tiempo real, caché y almacenamiento de objetos.",
+      "en": "Elixir/Phoenix backend: high-frequency event ingestion, real-time communication, caching and object storage."
+    },
+    "highlights": [
+      {
+        "title": { "es": "Ingesta idempotente de eventos", "en": "Idempotent event ingestion" },
+        "short": {
+          "es": "Eventos de alta frecuencia con deduplicación y diseño eficiente en costo.",
+          "en": "High-frequency events with deduplication and a cost-efficient design."
+        },
+        "detail": {
+          "es": "Procesamiento de eventos de alta frecuencia (cada pocos segundos por cliente) con claves de idempotencia para tolerar reintentos y duplicados, y cálculo de estado de presencia. Diseñado sin procesos por entidad (GenServers) para escalar con bajo costo.",
+          "en": "High-frequency event processing (every few seconds per client) with idempotency keys to tolerate retries and duplicates, plus presence-state computation. Designed without per-entity processes (GenServers) to scale at low cost."
+        },
+        "stack": ["elixir", "phoenix"]
+      },
+      {
+        "title": { "es": "Tiempo real y caché", "en": "Real time & caching" },
+        "short": {
+          "es": "Migración de GraphQL a WebSockets (Phoenix Channels) con caché en Valkey.",
+          "en": "Migrated from GraphQL to WebSockets (Phoenix Channels) with Valkey caching."
+        },
+        "detail": {
+          "es": "Migración de una API GraphQL a WebSockets con Phoenix Channels, jobs programados y notificaciones push, usando Valkey como caché para reducir la carga sobre la base de datos.",
+          "en": "Migrated a GraphQL API to WebSockets with Phoenix Channels, scheduled jobs and push notifications, using Valkey as a cache to reduce database load."
+        },
+        "stack": ["elixir", "phoenix", "valkey"]
+      },
+      {
+        "title": { "es": "Migración de object storage", "en": "Object storage migration" },
+        "short": {
+          "es": "De Backblaze B2 a almacenamiento compatible con S3 (OVH), incluyendo código legado.",
+          "en": "From Backblaze B2 to S3-compatible storage (OVH), including legacy code."
+        },
+        "detail": {
+          "es": "Migración de datos e integraciones de Backblaze B2 a OVH Object Storage mediante su API compatible con S3, actualizando implementaciones legadas.",
+          "en": "Migrated data and integrations from Backblaze B2 to OVH Object Storage through its S3-compatible API, updating legacy implementations."
+        },
+        "stack": ["ovh", "backblaze"]
+      }
+    ],
+    "keywords": {
+      "es": ["Elixir / Phoenix", "Idempotencia", "Event ingestion", "WebSockets", "Caching (Valkey)", "S3-compatible storage", "Cost-aware design"],
+      "en": ["Elixir / Phoenix", "Idempotency", "Event ingestion", "WebSockets", "Caching (Valkey)", "S3-compatible storage", "Cost-aware design"]
+    },
+    "stack": ["elixir", "phoenix", "valkey", "ovh"]
+  }
+]
